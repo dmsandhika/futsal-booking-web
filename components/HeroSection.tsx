@@ -3,8 +3,31 @@ import { Calendar, ChevronRight, MapPin, Clock } from 'lucide-react'
 import heroImage from '../public/images/field.webp'
 import Image from 'next/image'
 import Link from 'next/link'
+import apiUrl from '@/lib/env'
 
-const HeroSection = () => {
+async function checkCloseDate() {
+  try {
+    const response = await fetch(`${apiUrl}/close-dates/check`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch close date')
+    }
+
+    const data = await response.json()
+    return data.is_closed
+  } catch (error) {
+    console.error('Error fetching close date:', error)
+    return null
+  }
+}
+
+const HeroSection = async () => {
+  const isClosed = await checkCloseDate()
   return (
     <section className="gradient-hero relative min-h-[90vh] overflow-hidden">
       {/* Background Pattern */}
@@ -21,9 +44,13 @@ const HeroSection = () => {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Content */}
           <div className="animate-slide-up">
-            <div className="bg-primary/10 text-primary mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium">
-              <span className="bg-primary flex h-2 w-2 animate-pulse rounded-full" />
-              Booking Online 24/7
+            <div
+              className={`bg-primary/10 ${isClosed ? 'text-red-500' : 'text-primary'} mb-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium`}
+            >
+              <span
+                className={`${isClosed ? 'bg-red-500' : 'bg-primary'} flex h-2 w-2 animate-pulse rounded-full`}
+              />
+              {isClosed ? 'Booking Online Ditutup' : 'Booking Online 24/7'}
             </div>
 
             <h1 className="text-foreground mb-6 text-4xl leading-tight font-extrabold md:text-5xl lg:text-6xl">
