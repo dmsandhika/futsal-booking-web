@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { usePathname } from 'next/navigation'
 import { Calendar, Home, Shield } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -17,7 +18,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="gradient-primary flex h-10 w-10 items-center justify-center rounded-lg">
-              <span className="text-primary-foreground text-xl font-bold">⚽</span>
+              <Image src="/images/logo.png" alt="FutsalKu Logo" width={48} height={48} />
             </div>
             <span className="text-foreground text-xl font-bold">FutsalKu</span>
           </Link>
