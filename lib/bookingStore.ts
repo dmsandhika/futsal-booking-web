@@ -4,7 +4,7 @@ export interface Court {
     id: string;
     name: string;
     description: string;
-    pricePerHour: number;
+    price_per_hour: number;
     image: string;
     features: string[];
 }

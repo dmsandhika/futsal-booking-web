@@ -25,7 +25,7 @@ const FieldCard = ({ field, index }: FieldCardProps) => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                 <Badge className="absolute right-4 top-4 bg-primary text-primary-foreground">
-                    {formatPrice(field.pricePerHour)}/jam
+                    {formatPrice(field.price_per_hour)}/jam
                 </Badge>
             </div>
 
