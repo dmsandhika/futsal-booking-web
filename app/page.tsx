@@ -102,7 +102,7 @@ export const Home = async () => {
                     </div>
                     <div>
                       <div className="text-sm text-muted-foreground">Alamat</div>
-                      <div className="font-semibold text-foreground">Jl. Olahraga No. 123, Jakarta</div>
+                      <div className="font-semibold text-foreground">Jl. Mulu Sampai Capek</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
@@ -119,7 +119,7 @@ export const Home = async () => {
 
               <div className="overflow-hidden rounded-2xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81572451536045!3d-6.194741395515238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f422f8c13c5d%3A0x64b4e6e0bf0f6c2e!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1635000000000!5m2!1sid!2sid"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16331552.565716852!2d97.33193214717589!3d2.0776540035389695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7afd00729cbb67%3A0x99d7670b01cb5fe0!2sLos%20Pollos%20Hermanos!5e0!3m2!1sid!2sid!4v1768373940524!5m2!1sid!2sid"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
