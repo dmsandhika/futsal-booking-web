@@ -66,7 +66,7 @@ const HeroSection = async () => {
             {/* CTA Buttons */}
             <div className="mb-12 flex flex-wrap gap-4">
               <Button variant="hero" size="xl" asChild>
-                <Link href="/jadwal">
+                <Link href="/schedule" className="flex items-center gap-2">
                   <Calendar className="h-5 w-5" />
                   Cek Jadwal Tersedia
                   <ChevronRight className="h-5 w-5" />

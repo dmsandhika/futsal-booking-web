@@ -31,8 +31,8 @@ const Navbar = () => {
                 Beranda
               </Link>
             </Button>
-            <Button variant={isActive('/jadwal') ? 'default' : 'ghost'} size="sm" asChild>
-              <Link href="/jadwal" className="flex items-center gap-2">
+            <Button variant={isActive('/schedule') ? 'default' : 'ghost'} size="sm" asChild>
+              <Link href="/schedule" className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 Cek Jadwal
               </Link>
